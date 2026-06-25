@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Articles d'Evan Aydaoui — recherche, médias, humanités numériques et Jiu-Jitsu Brésilien." />
+  <title>Articles — Evan Aydaoui</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-name">Evan Aydaoui</span>
+        <span class="logo-subtitle">Master Médias & Humanités Numériques</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="memoire.html">Mémoire</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ======= EN-TÊTE ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-label">Publications</p>
+        <h1>Articles</h1>
+        <div class="separator"></div>
+        <p class="page-hero-desc">Analyses, réflexions et travaux de recherche sur les médias, le sport et les humanités numériques.</p>
+      </div>
+    </section>
+
+    <!-- ======= LISTE ARTICLES ======= -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Filtres -->
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="filters">
+            <button class="filter-btn active" data-category="all">Tous</button>
+            <button class="filter-btn" data-category="recherche">Recherche</button>
+            <button class="filter-btn" data-category="medias">Médias</button>
+            <button class="filter-btn" data-category="numerique">Numérique</button>
+            <button class="filter-btn" data-category="actualite">Actualité</button>
+          </div>
+          <span class="articles-count" style="font-size: 0.85rem; color: var(--text-secondary);"></span>
+        </div>
+
+        <!-- Article featured -->
+        <a href="article/exemple-article.html" class="card-featured" data-category="recherche">
+          <div class="card-image">
+            <div class="card-image-placeholder">Image à venir</div>
+          </div>
+          <div class="card-body">
+            <span class="card-cat cat-recherche">Recherche — À la une</span>
+            <h2 class="card-title">La médiatisation du sport de combat : cadres théoriques et enjeux contemporains</h2>
+            <p class="card-excerpt">Une exploration des principales approches théoriques pour analyser la représentation médiatique des sports de combat, de Bourdieu aux cultural studies. Comment les médias construisent-ils le sens autour de pratiques encore marginales dans le paysage sportif français ?</p>
+            <div class="card-footer">
+              <span class="card-date">Juin 2026</span>
+              <span class="card-read-more">Lire l'article →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Grille d'articles -->
+        <div class="articles-grid">
+
+          <article class="article-card" data-category="medias">
+            <div class="card-image">
+              <div class="card-image-placeholder">Image à venir</div>
+              <span class="card-cat cat-medias">Médias</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="article/exemple-article.html">Le JJB sur Instagram : entre pédagogie, spectacle et identité communautaire</a></h3>
+              <p class="card-excerpt">Comment les pratiquants et clubs de Jiu-Jitsu Brésilien investissent les plateformes sociales pour construire une image et fédérer une communauté.</p>
+              <div class="card-footer">
+                <span class="card-date">Mai 2026</span>
+                <a href="article/exemple-article.html" class="card-read-more">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" data-category="numerique">
+            <div class="card-image">
+              <div class="card-image-placeholder">Image à venir</div>
+              <span class="card-cat cat-numerique">Numérique</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="article/exemple-article.html">Humanités numériques et recherche en sciences sociales du sport</a></h3>
+              <p class="card-excerpt">Retour d'expérience sur l'usage des méthodes numériques — scraping, analyse de corpus, cartographie de réseaux — appliquées à l'étude du sport.</p>
+              <div class="card-footer">
+                <span class="card-date">Avril 2026</span>
+                <a href="article/exemple-article.html" class="card-read-more">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" data-category="actualite">
+            <div class="card-image">
+              <div class="card-image-placeholder">Image à venir</div>
+              <span class="card-cat cat-actualite">Actualité</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="article/exemple-article.html">Le JJB aux JO : quel avenir pour le sport de combat dans les médias généralistes ?</a></h3>
+              <p class="card-excerpt">À l'heure où le MMA frappe à la porte des Jeux Olympiques, que révèle la couverture médiatique de ces disciplines sur nos représentations du sport ?</p>
+              <div class="card-footer">
+                <span class="card-date">Mars 2026</span>
+                <a href="article/exemple-article.html" class="card-read-more">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" data-category="recherche">
+            <div class="card-image">
+              <div class="card-image-placeholder">Image à venir</div>
+              <span class="card-cat cat-recherche">Recherche</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="article/exemple-article.html">Corpus et méthode : constituer une archive médiatique du JJB en France</a></h3>
+              <p class="card-excerpt">Présentation des choix méthodologiques pour constituer le corpus d'analyse de mon mémoire : quels médias retenir, quelles périodes, quels critères d'inclusion ?</p>
+              <div class="card-footer">
+                <span class="card-date">Février 2026</span>
+                <a href="article/exemple-article.html" class="card-read-more">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" data-category="medias">
+            <div class="card-image">
+              <div class="card-image-placeholder">Image à venir</div>
+              <span class="card-cat cat-medias">Médias</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="article/exemple-article.html">YouTube et le JJB : économie de l'attention et pédagogie du combat</a></h3>
+              <p class="card-excerpt">Les chaînes YouTube consacrées au JJB cumulent des millions de vues. Que nous dit cette popularité sur la place du corps, de la technique et du spectacle dans notre culture médiatique ?</p>
+              <div class="card-footer">
+                <span class="card-date">Janvier 2026</span>
+                <a href="article/exemple-article.html" class="card-read-more">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" data-category="numerique">
+            <div class="card-image">
+              <div class="card-image-placeholder">Image à venir</div>
+              <span class="card-cat cat-numerique">Numérique</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="article/exemple-article.html">Analyser les communautés en ligne : outils et limites pour le chercheur en SHS</a></h3>
+              <p class="card-excerpt">Tour d'horizon des outils disponibles pour étudier les communautés numériques — des API des plateformes aux logiciels d'analyse de réseau — et de leurs contraintes épistémologiques.</p>
+              <div class="card-footer">
+                <span class="card-date">Décembre 2025</span>
+                <a href="article/exemple-article.html" class="card-read-more">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Message aucun résultat -->
+        <div class="no-results" style="display: none; text-align: center; padding: 4rem 0; color: var(--text-secondary);">
+          <p>Aucun article dans cette catégorie pour le moment.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-name">Evan Aydaoui</span>
+          <p>Étudiant en Master Médias & Humanités Numériques. Ce blog est un espace de recherche, d'écriture et de réflexion académique autour des médias, du sport et du numérique.</p>
+          <div class="footer-social">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="memoire.html">Mémoire</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Catégories</h4>
+          <ul>
+            <li><a href="articles.html">Recherche</a></li>
+            <li><a href="articles.html">Médias</a></li>
+            <li><a href="articles.html">Numérique</a></li>
+            <li><a href="articles.html">Actualité</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <span>© 2026 Evan Aydaoui — Tous droits réservés</span>
+          <span>Master Médias & Humanités Numériques</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/articles.js"></script>
+</body>
+</html>
