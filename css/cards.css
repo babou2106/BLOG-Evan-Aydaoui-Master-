@@ -73,6 +73,7 @@
 .cat-medias    { background-color: rgba(181,135,58,0.12); color: var(--accent-secondary); }
 .cat-numerique { background-color: rgba(16,118,87,0.1); color: #107657; }
 .cat-actualite { background-color: rgba(100,50,150,0.1); color: #643296; }
+.cat-cinema    { background-color: rgba(185,28,28,0.1); color: #b91c1c; }
 
 .card-title {
   font-family: var(--font-title);

@@ -904,6 +904,7 @@ ul {
 .badge-medias    { background-color: rgba(181,135,58,0.12); color: var(--accent-secondary); }
 .badge-numerique { background-color: rgba(16,118,87,0.1); color: #107657; }
 .badge-actualite { background-color: rgba(100,50,150,0.1); color: #643296; }
+.badge-cinema    { background-color: rgba(185,28,28,0.1); color: #b91c1c; }
 
 .article-hero h1 {
   font-family: var(--font-title);
