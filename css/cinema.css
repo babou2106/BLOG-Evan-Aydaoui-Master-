@@ -1,0 +1,264 @@
+/* =========================================
+   PAGE CRITIQUE DE FILM (style Letterboxd)
+   ========================================= */
+
+/* ---- En-tête sombre avec affiche ---- */
+.film-hero {
+  padding: 7.5rem 0 3.5rem;
+  background: linear-gradient(160deg, #16233c 0%, var(--accent-primary) 70%, #1e3459 100%);
+  color: #fff;
+}
+
+.film-hero-inner {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: end;
+}
+
+/* Affiche du film — background-image avec repli texte */
+.film-poster {
+  width: 220px;
+  aspect-ratio: 2 / 3;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* Quand l'image est présente, le texte de repli est masqué */
+.film-poster.has-image {
+  color: transparent;
+}
+
+.film-hero-info .film-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.film-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.film-title .film-year {
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 0.6em;
+  margin-left: 0.4rem;
+}
+
+.film-director {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.film-director strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- Note en étoiles ---- */
+.film-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 0.2rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--accent-secondary);
+  letter-spacing: 0.05em;
+}
+
+.stars .star-empty {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.rating-value {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.rating-value span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+/* ---- Métadonnées du film ---- */
+.film-meta {
+  display: flex;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.film-meta-item strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.15rem;
+}
+
+/* ---- Corps de la critique ---- */
+.review-section {
+  padding: 4rem 0;
+}
+
+.review-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.review-header h2 {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.review-header .review-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.review-body {
+  max-width: 720px;
+}
+
+.review-body p {
+  color: var(--text-secondary);
+  font-size: 1.03rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.review-body p:first-of-type::first-letter {
+  font-family: var(--font-title);
+  font-size: 3.2em;
+  font-weight: 700;
+  float: left;
+  line-height: 0.85;
+  margin: 0.08em 0.12em 0 0;
+  color: var(--accent-primary);
+}
+
+/* ---- Section casting ---- */
+.cast-section {
+  padding: 4rem 0;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--separator);
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.cast-member {
+  text-align: center;
+}
+
+/* Photo — background-image avec initiales en repli */
+.cast-photo {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: var(--separator);
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border: 3px solid var(--bg-main);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.cast-member:hover .cast-photo {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cast-photo.has-image {
+  color: transparent;
+}
+
+.cast-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.cast-role {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .film-hero {
+    padding: 6rem 0 2.5rem;
+  }
+
+  .film-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .film-poster {
+    width: 160px;
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cast-photo {
+    width: 90px;
+    height: 90px;
+  }
+}

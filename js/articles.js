@@ -2,12 +2,12 @@
    FILTRES PAR CATÉGORIE — PAGE ARTICLES
    ========================================= */
 const filterBtns = document.querySelectorAll('.filter-btn');
-const articleCards = document.querySelectorAll('[data-category]');
+const articleCards = document.querySelectorAll('.article-card[data-category], .card-featured[data-category]');
 const noResults = document.querySelector('.no-results');
 const countDisplay = document.querySelector('.articles-count');
 
 function updateCount() {
-  const visible = document.querySelectorAll('[data-category]:not([style*="display: none"])').length;
+  const visible = [...articleCards].filter(c => c.style.display !== 'none').length;
   if (countDisplay) {
     countDisplay.textContent = `${visible} article${visible > 1 ? 's' : ''}`;
   }
