@@ -5,10 +5,22 @@ const navbar = document.querySelector('.navbar');
 const burger = document.querySelector('.nav-burger');
 const navLinks = document.querySelector('.nav-links');
 
-// Effet ombre au scroll
+// Ombre au scroll + masquage à la descente, retour à la remontée
 if (navbar) {
+  let lastY = window.scrollY;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    const y = window.scrollY;
+    navbar.classList.toggle('scrolled', y > 20);
+
+    const menuOpen = navLinks && navLinks.classList.contains('nav-open');
+    if (!menuOpen) {
+      if (y > 160 && y > lastY + 4) {
+        navbar.classList.add('nav-hidden');
+      } else if (y < lastY - 4 || y <= 160) {
+        navbar.classList.remove('nav-hidden');
+      }
+    }
+    lastY = y;
   }, { passive: true });
 }
 
@@ -64,23 +76,39 @@ setActiveNavLink();
 
 /* =========================================
    ANIMATION APPARITION AU SCROLL
+   La classe .reveal est ajoutée ici (et non
+   dans le HTML) : sans JS, tout reste visible.
    ========================================= */
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -40px 0px'
-};
+const revealSelector = [
+  '.article-card',
+  '.card-featured',
+  '.section-header',
+  '.hero-content',
+  '.page-hero .container',
+  '.chapter-item',
+  '.sidebar-card',
+  '.cast-member',
+  '.interest-tag',
+  '.timeline-item',
+  '.contact-link-item',
+  '.contact-form',
+  '.teaser-stat',
+  '.memoire-teaser-text'
+].join(', ');
 
-const appearObserver = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      appearObserver.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.appear').forEach(el => {
-  appearObserver.observe(el);
+document.querySelectorAll(revealSelector).forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.setProperty('--reveal-delay', `${(i % 5) * 70}ms`);
+  revealObserver.observe(el);
 });
 
 /* =========================================

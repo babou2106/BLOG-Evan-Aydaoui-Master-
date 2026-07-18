@@ -49,6 +49,50 @@ html {
   }
 }
 
+/* Barre de défilement discrète */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfc9bf;
+  border-radius: 8px;
+  border: 2px solid var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+/* =========================================
+   APPARITION AU SCROLL
+   La classe .reveal est posée par main.js :
+   sans JavaScript, tout reste visible.
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg-main);
@@ -149,6 +193,10 @@ ul {
   background-color: var(--accent-primary);
   color: #fff;
   transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .btn-secondary {

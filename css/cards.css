@@ -30,6 +30,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-image-placeholder {
@@ -41,6 +42,16 @@
   color: rgba(0,0,0,0.2);
   font-size: 0.8rem;
   font-weight: 500;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Zoom doux de l'image au survol de la carte */
+.article-card:hover .card-image img,
+.article-card:hover .card-image-placeholder,
+.card-featured:hover .card-image img,
+.card-featured:hover .card-image-placeholder,
+.article-list-item:hover .card-image img {
+  transform: scale(1.05);
 }
 
 /* Badge catégorie sur l'image */
