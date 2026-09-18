@@ -99,6 +99,15 @@
   color: rgba(255, 255, 255, 0.25);
 }
 
+/* Demi-étoile : moitié gauche dorée, moitié droite éteinte */
+.stars .star-half {
+  background: linear-gradient(90deg, var(--accent-secondary) 50%, rgba(255, 255, 255, 0.25) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .rating-value {
   font-family: var(--font-title);
   font-size: 1.15rem;
@@ -234,6 +243,15 @@
   font-size: 0.8rem;
   color: var(--text-secondary);
   font-style: italic;
+}
+
+.photo-credits {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--separator);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 /* ---- Responsive ---- */
